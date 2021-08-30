@@ -6,9 +6,14 @@
 
 ## Start
 
-in `weather-app/` run
+```sh
+git clone https://github.com/mowglixx/ExpressWeatherApp.git
+cd ExpressWeatherApp/
+```
 
-```shell
+In `ExpressWeatherApp/` run
+
+```sh
 npm install
 npm start
 ```
@@ -16,8 +21,8 @@ npm start
 ## Todo
 
 - UI
-    - add images representing the weather
-    - change themeing
+    - Add images representing the weather
+    - Change themeing
     - Dark Mode(?)
 
 - Backend
