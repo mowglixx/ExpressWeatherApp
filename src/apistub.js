@@ -2,9 +2,9 @@ const { join } = require('path')
 
 // set app variables
 const __meta = {
-    name: 'Weather',
-    description: 'Weather app created with Express, Handlebars, Mapbox API, OpenWeatherMap API in Javascript.',
-    version: '1.0.1',
+    appName: 'ExpressWeatherApp',
+    description: 'ExpressWeatherApp is A progressive web app written in Javascript using [Express](https://expressjs.com/), [Handlebars](https://www.npmjs.com/package/hbs) view engine and [Bootstrap](https://getbootstrap.com/) CSS to display Weather from [OpenWeatherMap](openweathermap.org) using latitude and longitude from a user input and lookup using [Mapbox](https://mapbox.com) Geocode API',
+    version: '1.0.2',
     author: 'Daniel Monaghan'
 }
 const __sys = {
