@@ -12,13 +12,15 @@ const app = express()
 
 // set Express server port
 app.listen(sys.network.port, () => {
-    console.log('GOTO: http://' + sys.network.hostname + ':' + sys.network.port)
+    console.log(meta.name)
+    console.log('Server live at: http://' + sys.network.hostname + ':' + sys.network.port)
 })
 // Set app to use hbs (Handlebars)
 app.set('view engine', sys.display.viewEngine)
 
 // set Directorys for use in app
 // Serve '/public' Directory for express
+// needed for 'static' assets suchas images and CSS files
 app.use(express.static(sys.paths.publicPath))
 
 // Handlebars Views and Partials Paths
@@ -40,7 +42,7 @@ app.get('', (req, res) => {
     })
 });
 
-// About Page
+// About Page (STUB)
 app.get('/about', (req, res) => {
     res.render('about', {
         meta,
@@ -51,7 +53,7 @@ app.get('/about', (req, res) => {
     })
 })
 
-// Help Page
+// Help Page (STUB)
 app.get('/help', (req, res) => {
     res.render('help', {
         meta,
@@ -63,7 +65,7 @@ app.get('/help', (req, res) => {
 })
 
 // Weather API
-app.get('/weather/:location', ({ params: p}, res) => {
+app.get('/weather/:location', ({ params: p }, res) => {
     // locationService passes lat,lon to weatherService via callback
     geocode(p.location, (error, { longitude, latitude, url: lurl } = {}) => {
         if (error) {
@@ -95,9 +97,10 @@ app.get('/weather/:location', ({ params: p}, res) => {
         }
     })
 })
-// Weather API
-app.get('/weather*', ({ params: p}, res) => {
-    res.send({errorMessage: 'No location given'})
+
+// Weather API 404 (Wildcard to prevent no location being sent to the function)
+app.get('/weather*', ({ params: p }, res) => {
+    res.send({ errorMessage: 'No location given' })
 })
 
 
