@@ -18,12 +18,11 @@ npm start
 
 ## Todo
 
-- UI
-    - Add images representing the weather
-    - Change themeing
-    - Dark Mode(?)
-
-- Extra    
-    - Users With Login
-    - Animated SVGs
-    - Autocomplete Weather Search
+### UI
+ - Add images representing the weather
+ - Change themeing
+ - Dark Mode(?)
+### Extra    
+ - Users With Login
+ - Animated SVGs
+ - Autocomplete Weather Search
