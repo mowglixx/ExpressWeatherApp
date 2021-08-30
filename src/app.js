@@ -126,5 +126,4 @@ app.get('/*', (req, res) => {
             errorMessage: 'The content you are looking for is not here',
         }
     })
-    // console.log(req)
 });
