@@ -1,6 +1,6 @@
 # ExpressWeatherApp
 
-> Weather web app using express and handlebars
+ExpressWeatherApp is A progressive web app written in Javascript using [Express](https://expressjs.com/), [Handlebars](https://www.npmjs.com/package/hbs) view engine and [Bootstrap](https://getbootstrap.com/) CSS to display Weather from [OpenWeatherMap](openweathermap.org) using latitude and longitude from a user input and lookup using [Mapbox](https://mapbox.com) Geocode API
 
 ---
 
