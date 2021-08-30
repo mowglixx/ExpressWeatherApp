@@ -1,4 +1,4 @@
-# weather-app
+# ExpressWeatherApp
 
 > Weather web app using express and handlebars
 
