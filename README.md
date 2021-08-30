@@ -30,5 +30,5 @@ npm start
 
 - Extra    
     - Users With Login
-    - Animated([?](Maybe)) SVGs
+    - Animated SVGs
     - Autocomplete Weather Search
