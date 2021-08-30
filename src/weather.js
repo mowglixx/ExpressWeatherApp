@@ -12,7 +12,7 @@ const forecast = (
     const apiEndpoint = '/data/2.5/weather?units=metric&lat=' + encodeURIComponent(latitude) + '&lon=' + encodeURIComponent(longitude) + '&appid=' + encodeURIComponent(apiKey)
     const url = 'https://' + apiHost + apiEndpoint
 
-    request({ url, json: true }, (err, { statusCode }, { name, sys, weather, main } = {}) => {
+    request({ url, json: true }, (err, { statusCode } = {}, { name, sys, weather, main } = {}) => {
 
         if (weather) {
 
