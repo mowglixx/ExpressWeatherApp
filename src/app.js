@@ -98,6 +98,16 @@ app.get('/weather/:location', ({ params: p }, res) => {
     })
 })
 
+
+
+//       __        _ __               
+//  /  //  )/  /  ' )  )              
+// '--//  /'--/    /--'__.  _,  _  _  
+//   /(__/   /    /   (_/|_(_)_</_/_)_
+//                          /|        
+//                         |/         
+
+
 // Weather API 404 (Wildcard to prevent no location being sent to the function)
 app.get('/weather*', ({ params: p }, res) => {
     res.send({ errorMessage: 'No location given' })
@@ -107,7 +117,18 @@ app.get('/weather*', ({ params: p }, res) => {
 
 
 // Help 404
-app.get('/help/*', (req, res) => {
+app.get('/help*', (req, res) => {
+    res.render('404', {
+        meta,
+        page: {
+            title: 'Not found',
+            errorMessage: 'Help article not found',
+        }
+    })
+});
+
+// About 404
+app.get('/about*', (req, res) => {
     res.render('404', {
         meta,
         page: {
@@ -118,7 +139,7 @@ app.get('/help/*', (req, res) => {
 });
 
 // 404
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
     res.render('404', {
         meta,
         page: {

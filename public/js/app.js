@@ -1,32 +1,26 @@
 // Client Side Java script!!!
-console.log('Client Side Javascript File is loaded')
-
-const magic = () => {
-    console.log('Magic Done ')
-}
-
-magic()
+console.log('Client Side Javascript Loaded')
 
 async function fetchAsync (url, callback) {
     let response = await fetch(url);
     let data = await response.json();
+    //console.log(data)
     callback(data)
 }
 
-const url = 'http://localhost:9000/weather'
-
-const oof = document.getElementById('json').innerHTML
+//const oof = document.getElementById('json')
 
 
-fetchAsync(url, ({weather,location}) => {
-    replacementString = 'The weather in '+ 
-    location.cityName + 
-    ' is currently '+
-    weather.currentWeather +
-    ' and the Temp is ' +
-    weather.temp +
-    ' degrees outside.'
-    document.getElementById('json').innerHTML = replacementString
-    console.log(weather, location)
+fetch('/weather/Manchester').then((response) => {
+    response.json().then(({weather,location}) => {
+        replacementString = 'The weather in '+ 
+        location.town + 
+        ' is currently '+
+        weather.currently +
+        ' and the Temp is ' +
+        weather.temp +
+        ' degrees outside.'
+        document.getElementById('json').innerHTML = replacementString
+        //console.log(weather, location)
+    })
 })
-

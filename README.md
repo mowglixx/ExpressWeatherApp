@@ -23,9 +23,6 @@ npm start
     - Change themeing
     - Dark Mode(?)
 
-- Backend
-    - Implement `forecast` & `geocode` API from express
-
 - Extra    
     - Users With Login
     - Animated SVGs
