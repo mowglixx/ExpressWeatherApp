@@ -1,0 +1,20 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "nodemon src/app.js -e js,hbs",
+    "withArg": "node src/app.js \"This is a test \"string\" arg\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "postman-request": "^2.88.1-postman.30"
+  }
+}
