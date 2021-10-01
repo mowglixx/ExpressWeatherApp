@@ -12,7 +12,7 @@ const app = express()
 
 // set Express server port
 app.listen(sys.network.port, () => {
-    console.log(meta.appName)
+    console.log(meta.appName, meta.version)
     console.log('Server live at: http://' + sys.network.hostname + ':' + sys.network.port)
 })
 // Set app to use hbs (Handlebars)
